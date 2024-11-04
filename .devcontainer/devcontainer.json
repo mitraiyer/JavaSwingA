@@ -2,32 +2,22 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
     "name": "Java",
-    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     "image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
-
     "build": {
         "dockerfile": "Dockerfile"
     },
-
     "features": {
         "ghcr.io/devcontainers/features/java:1": {
-            "installMaven": true,
-            "version": "latest",
-            "jdkDistro": "ms",
-            "gradleVersion": "latest",
-            "mavenVersion": "latest",
-            "antVersion": "latest",
-            "groovyVersion": "latest"
-        },
-        "ghcr.io/devcontainers/features/desktop-lite:1": {
-            "version": "latest",
-            "noVncVersion": "1.2.0",
-            "password": "vscode",
-            "webPort": "6080",
-            "vncPort": "5901"
-        }
+        "version": "none",
+        "installMaven": "false",
+        "installGradle": "false"
+    },
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+        "password": "vscode",
+        "webPort": "6080",
+        "vncPort": "5901"
     }
-
+}
 }
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
